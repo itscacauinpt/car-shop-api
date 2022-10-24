@@ -40,3 +40,13 @@ export const carMockUpdated: ICar & { _id: string } = {
   seatsQty: 2,
   doorsQty: 2,
 }
+
+export const carMockWrg: ICar = {
+  model: 'Wrong',
+  year: 9999,
+  color: 'black',
+  status: true,
+  buyValue: 9999999,
+  doorsQty: 4,
+  seatsQty: 4,
+}
