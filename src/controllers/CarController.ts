@@ -22,4 +22,10 @@ export default class Car {
 
     return res.status(200).json(readOne);
   }
+
+  async update(req: Request, res: Response<ICar>) {
+    const updated = await this._service.update(req.params.id, req.body);
+
+    return res.status(200).json(updated);
+  }
 }
