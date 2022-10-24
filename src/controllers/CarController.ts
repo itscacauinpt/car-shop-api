@@ -16,4 +16,10 @@ export default class Car {
 
     return res.status(200).json(readAll);
   }
+
+  async readOne(req: Request, res: Response<ICar>) {
+    const readOne = await this._service.readOne(req.params.id);
+
+    return res.status(200).json(readOne);
+  }
 }
