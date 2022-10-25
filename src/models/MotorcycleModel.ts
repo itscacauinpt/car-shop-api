@@ -3,7 +3,12 @@ import { IMotorcycle } from '../interfaces/IMotorcycle';
 import MongoModel from './MongoModel';
 
 const motorcyleSchema = new Schema<IMotorcycle>({
-  category: Array,
+  model: String,
+  year: Number,
+  color: String,
+  status: Boolean,
+  buyValue: Number,
+  category: String,
   engineCapacity: Number,
 }, { versionKey: false });
 
