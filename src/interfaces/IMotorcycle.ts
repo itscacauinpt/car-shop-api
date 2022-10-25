@@ -1,14 +1,7 @@
 import { z } from 'zod';
 import { vehileSchema } from './IVehicle';
 
-// enum Categories {
-//   Street,
-//   Custom,
-//   Trail,
-// }
-
 const motorcyleSchema = vehileSchema.extend({
-  // category: z.nativeEnum(Categories),
   category: z.enum(['Street', 'Custom', 'Trail']),
 
   engineCapacity: z.number({
