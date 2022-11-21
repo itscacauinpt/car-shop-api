@@ -6,7 +6,11 @@
 <p>Projeto feito de forma individual durante o curso da <a href="https://www.betrybe.com">Trybe</a>. </p>
 <p>✨ API CRUD.</p>
 <p>Nesse projeto, trabalhamos com o banco de dados de uma loja de automóveis; encontrando/filtrando dados. </p>
-<br/>
+<h4>Para rodas localmente:</h4>
+<ul>
+ <li>Escreva o comando <code>docker-compose up -d</code> na pasta principal;</li>
+ <li>Abra seu browser <code>http://localhost:3001/api-docs/</code> .</li>
+</ul>
 
 ## :star: Habilidades 
   * Filtragem, atualização e manipulação de dados;
