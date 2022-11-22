@@ -1,0 +1,102 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Car Shop Docs",
+    "description": "An API for a Car Shop with MongoDB and Mongoose.",
+    "termsOfService": "http://localhost:3001/terms/",
+    "contact": {
+      "email": "anaclaudia.sza@outlook.com"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3001/v1",
+      "description": "Development server"
+    }
+  ],
+  "tags": [
+    {
+    "name": "Cars",
+    "description": "Access to Car orders"
+    },
+    {
+      "name": "Motocycle",
+      "description": "Access to Motocycle orders"
+    }
+  ],
+  "paths": {
+    "/cars": {
+      "get": {
+        "tags": ["Cars"],
+        "summary": "Find all cars.",
+        "responses": {
+          "200": {
+            "description": "Get all cars route.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Car"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Car": {
+        "type": "object",
+        "properties": {
+          "model": {
+            "type": "string"
+          },
+          "year": {
+            "type": "number"
+          },
+          "color": {
+            "type": "string"
+          },
+          "buyValue": {
+            "type": "number"
+          },
+          "doorsQty": {
+            "type": "number"
+          },
+          "seatsQty": {
+            "type": "number"
+          }
+        }
+      },
+      "Motorcycle": {
+        "type": "object",
+        "properties": {
+          "model": {
+            "type": "string"
+          },
+          "year": {
+            "type": "number"
+          },
+          "color": {
+            "type": "string"
+          },
+          "buyValue": {
+            "type": "number"
+          },
+          "category": {
+            "type": "string",
+            "enum": ["Street", "Custom", "Trail"]
+          },
+          "engineCapacity": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  }
+}
