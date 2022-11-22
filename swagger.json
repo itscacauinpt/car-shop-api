@@ -18,11 +18,11 @@
   "tags": [
     {
     "name": "Cars",
-    "description": "Access to Car orders"
+    "description": "Access to Cars"
     },
     {
-      "name": "Motocycle",
-      "description": "Access to Motocycle orders"
+      "name": "Motorcycles",
+      "description": "Access to Motorcycles"
     }
   ],
   "paths": {
@@ -45,9 +45,405 @@
             }
           }
         }
+      },
+      "post": {
+        "tags": ["Cars"],
+        "summary": "Create a new product route.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Car"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Car"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "example": {
+                  "error": "Invalid schema."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "/cars/{id}": {
+      "get": {
+        "tags": ["Cars"],
+        "summary": "Get product by ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Car"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "failed.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "error": "Invalid schema."
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "failed/not found.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "error": "Not found."
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": ["Cars"],
+        "summary": "Update product.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Car"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Car"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "failed.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "error": "Invalid schema."
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "failed/not found.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "error": "Not found."
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": ["Cars"],
+        "summary": "Delete product.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Car"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "failed.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "error": "Invalid schema."
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "failed/not found.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "error": "Not found."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "/motorcycles": {
+      "get": {
+        "tags": ["Motorcycles"],
+        "summary": "Find all motorcycles.",
+        "responses": {
+          "200": {
+            "description": "Get all motorcycles route.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Motorcycle"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": ["Motorcycles"],
+        "summary": "Create a new product.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Motorcycle"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Motorcycle"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "failed.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "error": "Invalid schema."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "/motorcycles/{id}": {
+      "get": {
+        "tags": ["Motorcycles"],
+        "summary": "Get product by ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Motorcycle"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "failed.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "error": "Invalid schema."
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "failed/not found.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "error": "Not found."
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": ["Motorcycles"],
+        "summary": "Update product.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Motorcycle"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Motorcycle"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "failed.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "error": "Invalid schema."
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "failed/not found.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "error": "Not found."
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": ["Motorcycles"],
+        "summary": "Delete product.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Motorcycle"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "failed.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "error": "Invalid schema."
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "failed/not found.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "error": "Not found."
+                }
+              }
+            }
+          }
+        }
       }
     }
+
   },
+
   "components": {
     "schemas": {
       "Car": {
