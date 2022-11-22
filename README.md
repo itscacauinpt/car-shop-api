@@ -8,7 +8,10 @@
 <p>Nesse projeto, trabalhamos com o banco de dados de uma loja de automóveis; encontrando/filtrando dados. </p>
 <h4>Para rodar localmente:</h4>
 <ul>
- <li>Escreva o comando <code>docker-compose up -d</code> na pasta principal;</li>
+ <li>Execute os seguintes comandos no terminal: </li>
+ <li><code>docker-compose up -d</code> ;</li>
+ <li><code>docker exec -it car_shop bash</code> ;</li>
+ <li><code>npm run dev</code> ;</li>
  <li>Abra seu browser <code>http://localhost:3001/api-docs/</code> .</li>
 </ul>
 
