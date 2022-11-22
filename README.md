@@ -9,8 +9,7 @@
 <h4>Para rodar localmente:</h4>
 <ul>
  <li>Escreva o comando <code>docker-compose up -d</code> na pasta principal;</li>
- <li>Abra seu browser <code>http://localhost:3001/</code> .</li>
-<!--  <li>Abra seu browser <code>http://localhost:3001/api-docs/</code> .</li> -->
+ <li>Abra seu browser <code>http://localhost:3001/api-docs/</code> .</li>
 </ul>
 
 ## :star: Habilidades 
