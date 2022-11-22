@@ -48,7 +48,7 @@
       },
       "post": {
         "tags": ["Cars"],
-        "summary": "Create a new product route.",
+        "summary": "Create a new cars route.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -61,7 +61,7 @@
         },
         "responses": {
           "201": {
-            "description": "success.",
+            "description": "Success.",
             "content": {
               "application/json": {
                 "schema": {
@@ -71,7 +71,7 @@
             }
           },
           "400": {
-            "description": "",
+            "description": "Failed/invalid schema.",
             "content": {
               "application/json": {
                 "example": {
@@ -87,7 +87,7 @@
     "/cars/{id}": {
       "get": {
         "tags": ["Cars"],
-        "summary": "Get product by ID.",
+        "summary": "Get car by ID.",
         "parameters": [
           {
             "name": "id",
@@ -100,7 +100,7 @@
         ],
         "responses": {
           "200": {
-            "description": "success.",
+            "description": "Success.",
             "content": {
               "application/json": {
                 "schema": {
@@ -110,7 +110,7 @@
             }
           },
           "400": {
-            "description": "failed.",
+            "description": "Failed/invalid schema.",
             "content": {
               "application/json": {
                 "example": {
@@ -120,7 +120,7 @@
             }
           },
           "404": {
-            "description": "failed/not found.",
+            "description": "Failed/not found.",
             "content": {
               "application/json": {
                 "example": {
@@ -133,7 +133,7 @@
       },
       "put": {
         "tags": ["Cars"],
-        "summary": "Update product.",
+        "summary": "Update car.",
         "parameters": [
           {
             "name": "id",
@@ -155,7 +155,7 @@
         },
         "responses": {
           "200": {
-            "description": "success.",
+            "description": "Success.",
             "content": {
               "application/json": {
                 "schema": {
@@ -165,7 +165,7 @@
             }
           },
           "400": {
-            "description": "failed.",
+            "description": "Failed/invalid schema.",
             "content": {
               "application/json": {
                 "example": {
@@ -175,7 +175,7 @@
             }
           },
           "404": {
-            "description": "failed/not found.",
+            "description": "Failed/not found.",
             "content": {
               "application/json": {
                 "example": {
@@ -188,7 +188,7 @@
       },
       "delete": {
         "tags": ["Cars"],
-        "summary": "Delete product.",
+        "summary": "Delete car.",
         "parameters": [
           {
             "name": "id",
@@ -201,7 +201,7 @@
         ],
         "responses": {
           "200": {
-            "description": "success.",
+            "description": "Success.",
             "content": {
               "application/json": {
                 "schema": {
@@ -211,7 +211,7 @@
             }
           },
           "400": {
-            "description": "failed.",
+            "description": "Failed/invalid schema.",
             "content": {
               "application/json": {
                 "example": {
@@ -221,7 +221,7 @@
             }
           },
           "404": {
-            "description": "failed/not found.",
+            "description": "Failed/not found.",
             "content": {
               "application/json": {
                 "example": {
@@ -256,7 +256,7 @@
       },
       "post": {
         "tags": ["Motorcycles"],
-        "summary": "Create a new product.",
+        "summary": "Create a new motorcycle.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -269,7 +269,7 @@
         },
         "responses": {
           "201": {
-            "description": "success.",
+            "description": "Success.",
             "content": {
               "application/json": {
                 "schema": {
@@ -279,7 +279,7 @@
             }
           },
           "400": {
-            "description": "failed.",
+            "description": "Failed/invalid schema.",
             "content": {
               "application/json": {
                 "example": {
@@ -295,7 +295,7 @@
     "/motorcycles/{id}": {
       "get": {
         "tags": ["Motorcycles"],
-        "summary": "Get product by ID.",
+        "summary": "Get motorcycle by ID.",
         "parameters": [
           {
             "name": "id",
@@ -308,7 +308,7 @@
         ],
         "responses": {
           "200": {
-            "description": "success.",
+            "description": "Success.",
             "content": {
               "application/json": {
                 "schema": {
@@ -318,7 +318,7 @@
             }
           },
           "400": {
-            "description": "failed.",
+            "description": "Failed/invalid schema.",
             "content": {
               "application/json": {
                 "example": {
@@ -328,7 +328,7 @@
             }
           },
           "404": {
-            "description": "failed/not found.",
+            "description": "Failed/not found.",
             "content": {
               "application/json": {
                 "example": {
@@ -341,7 +341,7 @@
       },
       "put": {
         "tags": ["Motorcycles"],
-        "summary": "Update product.",
+        "summary": "Update motorcycle.",
         "parameters": [
           {
             "name": "id",
@@ -363,7 +363,7 @@
         },
         "responses": {
           "200": {
-            "description": "success.",
+            "description": "Success.",
             "content": {
               "application/json": {
                 "schema": {
@@ -373,7 +373,7 @@
             }
           },
           "400": {
-            "description": "failed.",
+            "description": "Failed/invalid schema.",
             "content": {
               "application/json": {
                 "example": {
@@ -383,7 +383,7 @@
             }
           },
           "404": {
-            "description": "failed/not found.",
+            "description": "Failed/not found.",
             "content": {
               "application/json": {
                 "example": {
@@ -396,7 +396,7 @@
       },
       "delete": {
         "tags": ["Motorcycles"],
-        "summary": "Delete product.",
+        "summary": "Delete motorcycle.",
         "parameters": [
           {
             "name": "id",
@@ -409,7 +409,7 @@
         ],
         "responses": {
           "200": {
-            "description": "success.",
+            "description": "Success.",
             "content": {
               "application/json": {
                 "schema": {
@@ -419,7 +419,7 @@
             }
           },
           "400": {
-            "description": "failed.",
+            "description": "Failed/invalid schema.",
             "content": {
               "application/json": {
                 "example": {
@@ -429,7 +429,7 @@
             }
           },
           "404": {
-            "description": "failed/not found.",
+            "description": "Failed/not found.",
             "content": {
               "application/json": {
                 "example": {
