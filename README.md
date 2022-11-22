@@ -11,6 +11,7 @@
  <li>Execute os seguintes comandos no terminal: </li>
  <li><code>docker-compose up -d</code> ;</li>
  <li><code>docker exec -it car_shop bash</code> ;</li>
+ <li><code>npm install</code> ;</li>
  <li><code>npm run dev</code> ;</li>
  <li>Abra seu browser <code>http://localhost:3001/api-docs/</code> .</li>
 </ul>
