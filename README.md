@@ -15,6 +15,7 @@
  <li><code>npm run dev</code> ;</li>
  <li>Abra seu browser <code>http://localhost:3001/api-docs/</code> .</li>
 </ul>
+<img src="./layout-app.png" width="650px" >
 
 ## :star: Habilidades 
   * Filtragem, atualização e manipulação de dados;
