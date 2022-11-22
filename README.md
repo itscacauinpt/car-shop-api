@@ -6,7 +6,7 @@
 <p>Projeto feito de forma individual durante o curso da <a href="https://www.betrybe.com">Trybe</a>. </p>
 <p>✨ API CRUD.</p>
 <p>Nesse projeto, trabalhamos com o banco de dados de uma loja de automóveis; encontrando/filtrando dados. </p>
-<h4>Para rodas localmente:</h4>
+<h4>Para rodar localmente:</h4>
 <ul>
  <li>Escreva o comando <code>docker-compose up -d</code> na pasta principal;</li>
  <li>Abra seu browser <code>http://localhost:3001/</code> .</li>
